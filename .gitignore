@@ -2,17 +2,18 @@
 backend/.venv/
 backend/__pycache__/
 backend/**/*.pyc
+backend/app/__pycache__/
 
 # database
 backend/interview.db
 
-# env
-.env
+# env — keep .env.production (no secrets, just /api path)
 backend/.env
+frontend/.env
 
 # node
 frontend/node_modules/
 frontend/dist/
 
 # vscode
-.vscode/
+.vscode/
