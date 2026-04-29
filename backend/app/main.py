@@ -26,7 +26,11 @@ load_dotenv(dotenv_path=os.path.abspath(_ENV_PATH))
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 # ── DB ────────────────────────────────────────────────────────────────────────
-models.Base.metadata.create_all(bind=engine)
+try:
+    models.Base.metadata.create_all(bind=engine)
+except Exception as _db_exc:
+    import logging as _log
+    _log.getLogger("uvicorn.error").error(f"[db] create_all failed: {_db_exc}")
 
 
 def _startup_seed():
