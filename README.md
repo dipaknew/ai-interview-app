@@ -4,7 +4,7 @@
 - Frontend: React + Vite
 - Backend: FastAPI
 - Database: SQLite (interview records + questions)
-- Speech-to-text: OpenAI Whisper model via OpenAI API
+- Speech-to-text: Groq API
 - LLM feedback: OpenAI GPT model via ChatCompletion
 
 ## Setup
@@ -14,7 +14,7 @@
 2. python -m venv .venv
 3. .venv\Scripts\activate
 4. pip install -r requirements.txt
-5. set OPENAI_API_KEY=your_key_here (Windows PowerShell: `$env:OPENAI_API_KEY = '...';`)
+5. set GROQ_API=your_key_here (Windows PowerShell: `$env:GROQ_API = '...';`)
 6. uvicorn app.main:app --reload --port 8000
 
 ### Frontend
