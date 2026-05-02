@@ -28,7 +28,7 @@
 - Upload mp3/wav and transcribe via /transcribe
 
 ## Environment variables
-- `OPENAI_API_KEY`
+- `GROQ_API_KEY`
 
 ## Notes
 - Adjust CORS in `backend/app/main.py` for production.
